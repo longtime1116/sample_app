@@ -2,10 +2,13 @@ hoge:
   name: hoge
   email: hoge@gmail.com
   password_digest: <%= User.digest('hogehoge') %>
+  admin: true
+
 geho:
   name: geho
   email: geho@gmail.com
   password_digest: <%= User.digest('hogehoge') %>
+
 michael:
   name: Michael Example
   email: michael@example.com
