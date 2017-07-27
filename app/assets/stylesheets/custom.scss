@@ -1,6 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 /* universal */
 
 body {
@@ -56,13 +66,13 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: #fff;
+    color: white;
     text-decoration: none;
   }
 }
@@ -72,7 +82,7 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
     color: $gray;
@@ -80,11 +90,9 @@ footer {
       color: $gray-darker;
     }
   }
-
   small {
     float: left;
   }
-
   ul {
     float: right;
     list-style: none;
@@ -95,14 +103,6 @@ footer {
   }
 }
 
-/* mixins, variables, etc */
-$gray-medium-light: #eaeaea;
-
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
-}
 /* miscellaneous */
 
 .debug_dump {
@@ -187,6 +187,7 @@ aside {
 .users.follow {
   padding: 0;
 }
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -230,6 +231,7 @@ input {
 }
 
 /* Users index */
+
 .users {
   list-style: none;
   margin: 0;
